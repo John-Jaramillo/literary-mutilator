@@ -1,5 +1,8 @@
-document.getElementById('paragraph1').onclick = function changeContent() {
-    document.getElementById('paragraph1').style = "Color: red";
+
+function changeColor() {
+    let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    let myText = document.getElementById('paragraph1');
+    myText.style.color = '#' + randomColor;
 }
 
 function resetColor() {
@@ -14,7 +17,10 @@ function getSelectedText() {
 
 function replaceWith() {
     var str = document.getElementById("paragraph2").innerHTML;
-    var res = str.replace(changeFrom(), changeTo());
+    var chngFrom = changeFrom();
+    var regExpression = new RegExp(chngFrom, "g");
+    var chngTo = changeTo();
+    var res = str.replace(regExpression, chngTo);
     document.getElementById("paragraph2").innerHTML = res;
 }
 function changeFrom() {

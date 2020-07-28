@@ -1,0 +1,23 @@
+body {
+    background-color: aliceblue;
+}
+
+div {
+    border: solid black;
+    padding: 0 1rem 1rem;
+    margin: 3rem;
+    background-color: lightcyan;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    border: solid gray;
+    background-color: aqua;
+}
+
+button {
+    background-color: aqua;
+}

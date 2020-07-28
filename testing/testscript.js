@@ -7,7 +7,7 @@ function changeSelectionColor() {
         if (sel.getRangeAt && sel.rangeCount) {
             range = window.getSelection().getRangeAt(0);
 
-            var html = '<span style="Color: red;">' + range + '</span>'
+            var html = '<span style="Color: #ff0000;">' + range + '</span>'
             range.deleteContents();
 
             var el = document.createElement("div");
@@ -64,3 +64,10 @@ function drop_handler(ev) {
     const data = ev.dataTransfer.getData("application/my-app");
     ev.target.appendChild(document.getElementById(data));
 }
+
+function stringToArray(myString) {
+    let myArray = myString.split(/[ .,]+/);
+    return myArray;
+}
+
+console.log(stringToArray('This, is my. string.'));

@@ -3,28 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>JavaScript Literary Mutilator</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
 <h1>JavaScript Events</h1>
 
+<div id="section1">
 <h2>Click on the paragraph to change the text color.</h2>
-<p id="paragraph1">I can't. As much as I care about you, my first duty is to the ship. Captain, why are we out here chasing comets? I've had twelve years to think about it. And if I had it to do over again, I would have grabbed the phaser and pointed it at you instead of them. I think you've let your personal feelings cloud your judgement. Fate. It protects fools, little children, and ships named "Enterprise." Shields up! Rrrrred alert! Not if I weaken first. The game's not big enough unless it scares you a little. Fear is the true enemy, the only enemy. Computer, lights up! We could cause a diplomatic crisis. Take the ship into the Neutral Zone I'll be sure to note that in my log. You're going to be an interesting companion, Mr. Data. You bet I'm agitated! I may be surrounded by insanity, but I am not insane.
+<p id="paragraph1" onclick="changeColor()">I can't. As much as I care about you, my first duty is to the ship. Captain, why are we out here chasing comets? I've had twelve years to think about it. And if I had it to do over again, I would have grabbed the phaser and pointed it at you instead of them. I think you've let your personal feelings cloud your judgement. Fate. It protects fools, little children, and ships named "Enterprise." Shields up! Rrrrred alert! Not if I weaken first. The game's not big enough unless it scares you a little. Fear is the true enemy, the only enemy. Computer, lights up! We could cause a diplomatic crisis. Take the ship into the Neutral Zone I'll be sure to note that in my log. You're going to be an interesting companion, Mr. Data. You bet I'm agitated! I may be surrounded by insanity, but I am not insane.
 </p>
-<button type="button" onclick="resetColor()"">Reset Text Color Change</button>
+<button type="button" onclick="resetColor()">Reset Text Color Change</button>
+</div>
 
-<h2>Replace word with another word (only the first instance so far)</h2>
-<p id="paragraph2"> Doctor Gaius Baltar: [after finding out that he's being forced into becoming a politician while testing blood samples] Politics is the only thing more boring than blood samples.
-    Number Six: We're the children of humanity. That makes them our parents in a sense.  Aaron Doral: True, but parents have to die. It's the only way children can come into their own.
-    Commander William Adama: I gave the order, Son. It was my responsibility.  Captain Lee 'Apollo' Adama: I pulled the trigger. That's mine.
-    Commander William Adama: There's a reason you separate military and the police. One fights the enemies of the state, the other serves and protects the people. When the military becomes both, then the enemies of the state tend to become the people.
-    [repeated line, which a Six copy asks whenever it meets a human for the first time]  Number Six: Are you alive?
+
+<div id="section2">
+<h2>Replace all instances of a string with another string (it is case sensitive)</h2>
+<p id="paragraph2">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.
 </p>
 <form id="changeform">
     <input type="text" id="change-from" placeholder="Word to Replace">
     <input type="text" id="change-to" placeholder="Change To">
 </form>
 <button type="button" id="replaceText" onclick="replaceWith()">Replace Text</button>
+</div>
 
+
+<div id="section3">
 <h2>Encrypt selected text</h2>
 <p id="paragraph3"> Carson Beckett M. D.: ...well if I've learned one thing, Mum, it's that we Earthlings are ver...  Lt. Aiden Ford, USMC: Doc! You can't say that!  Carson Beckett M. D.: What?  Lt. Aiden Ford, USMC: Earthlings. It's compromising security!  Carson Beckett M. D.: She knows I'm from Earth, son! It's not a bloody secret!
     Dr. Rodney McKay: Maybe we should make a diversion.  Maj. Lorne: Are you volunteering?  Dr. Rodney McKay: I'll shut up.
