@@ -9,11 +9,6 @@ function resetColor() {
     document.getElementById('paragraph1').style = "Color: black";
 }
 
-function getSelectedText() {
-    var selectedText = '';
-    selectedText = window.getSelection().toString();
-    return selectedText;
-}
 
 function replaceWith() {
     var str = document.getElementById("paragraph2").innerHTML;
@@ -23,13 +18,31 @@ function replaceWith() {
     var res = str.replace(regExpression, chngTo);
     document.getElementById("paragraph2").innerHTML = res;
 }
+
 function changeFrom() {
     fromWord = document.getElementById('change-from').value;
     return(fromWord);
 }
+
 function changeTo() {
     toWord = document.getElementById('change-to').value;
     return(toWord);
+}
+
+
+function getSelectedText() {
+    var selectedText = '';
+    selectedText = window.getSelection().toString();
+    return selectedText;
+}
+
+function addtext() {
+    var newtext = getSelectedText();
+    document.testform.selectedtext.value += newtext;
+}
+
+function clearText() {
+    document.testform.selectedtext.value ='';
 }
 
 function encryptText(myText) {
@@ -54,17 +67,3 @@ function encryptText(myText) {
     let strConvert = new TextDecoder().decode(Uint8Array.from(arrayAscii));
     document.testform.selectedtext.value = strConvert;
 }
-
-
-function addtext() {
-    var newtext = getSelectedText();
-    document.testform.selectedtext.value += newtext;
-}
-
-function clearText() {
-    document.testform.selectedtext.value ='';
-}
-
-
-
-
